@@ -1,0 +1,97 @@
+body{
+	background-color: #EEE;
+}
+.card {
+	position: relative;
+	border: 2px solid #007bff;
+	/* Blue border color */
+	border-radius: 15px;
+	/* Rounded corners */
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/* Add shadow for depth */
+}
+
+.user-profile {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.card-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.card-subtitle {
+	font-size: 18px;
+	color: #6c757d;
+	margin-bottom: 10px;
+}
+
+.card-text {
+	margin-bottom: 10px;
+}
+
+.info-label {
+	font-weight: bold;
+}
+
+.action-icons {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	/* Adjust to left for RTL */
+}
+
+.preview-button {
+	margin-top: 10px;
+}
+
+.date-added {
+	font-size: 14px;
+	color: #6c757d;
+	margin-top: 10px;
+}
+
+.line {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 50%;
+	/* Adjust to right for RTL */
+	border-right: 2px dashed #007bff;
+	/* Use border-right for RTL */
+	height: 100%;
+}
+
+/* CSS for arrows */
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+
+.left-arrow {
+	right: 100%;
+	/* Extend from the left side of the card */
+	margin-right: 5px;
+	/* Add spacing between arrow and card */
+	border-right: 8px solid #007bff;
+}
+
+.right-arrow {
+	left: 100%;
+	/* Extend from the right side of the card */
+	margin-left: 5px;
+	/* Add spacing between arrow and card */
+	border-left: 8px solid #007bff;
+}

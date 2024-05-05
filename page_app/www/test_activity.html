@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة تدفق المعاملات</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for transaction cards */
+        body {
+            padding-top: 50px;
+            /* Add spacing from the top of the page */
+        }
+
+        .card {
+            position: relative;
+            border: 2px solid #007bff;
+            /* Blue border color */
+            border-radius: 15px;
+            /* Rounded corners */
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Add shadow for depth */
+        }
+
+        .user-profile {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-subtitle {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            font-weight: bold;
+        }
+
+        .action-icons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            /* Adjust to left for RTL */
+        }
+
+        .preview-button {
+            margin-top: 10px;
+        }
+
+        .date-added {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            /* Adjust to right for RTL */
+            border-right: 2px dashed #007bff;
+            /* Use border-right for RTL */
+            height: 100%;
+        }
+
+        /* CSS for arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+
+        .left-arrow {
+            right: 100%;
+            /* Extend from the left side of the card */
+            margin-right: 5px;
+            /* Add spacing between arrow and card */
+            border-right: 8px solid #007bff;
+        }
+
+        .right-arrow {
+            left: 100%;
+            /* Extend from the right side of the card */
+            margin-left: 5px;
+            /* Add spacing between arrow and card */
+            border-left: 8px solid #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Basic Procedure Card -->
+        <div class="card">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/80" alt="صورة المستخدم" class="user-profile">
+                </div>
+                <div class="col-md-8 text-right">
+                    <h4 class="card-title ">الإجراء الأساسي: إنشاء معاملة</h4>
+                    <p class="card-subtitle">الوجهة: قسم المالية</p>
+                    <p class="card-text"><span class="info-label">رقم المهملات:</span> TR12345</p>
+                    <p class="card-text"><span class="info-label">موضوع البريد الوارد:</span> طلب معاملة جديدة</p>
+                    <p class="card-text"><span class="info-label">نوع الإجراء:</span> إنشاء</p>
+                    <p class="card-text"><span class="info-label">وجهة البريد الوارد:</span> مجلد الوارد</p>
+                    <p class="card-text"><span class="info-label">تاريخ الإضافة:</span> 1 مايو، 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction Flow Layout -->
+        <div class="row">
+            <!-- Left Card with Arrow -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="action-icons">
+                        <button class="btn btn-primary"><i class="fas fa-plus"></i></button> <!-- Add icon button -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://via.placeholder.com/80" alt="صورة المستخدم" class="user-profile">
+                        </div>
+                        <div class="col-md-8 text-right">
+                            <h4 class="card-title">المعاملة 1</h4>
+                            <p class="card-subtitle">الوجهة: قسم المبيعات</p>
+                            <p class="card-text"><span class="info-label">رقم المهملات:</span> TR54321</p>
+                            <p class="card-text"><span class="info-label">موضوع البريد الوارد:</span> طلب مبيعات</p>
+                            <p class="card-text"><span class="info-label">نوع الإجراء:</span> موافقة</p>
+                            <p class="card-text"><span class="info-label">وجهة البريد الوارد:</span> الوارد المبيعات</p>
+                        </div>
+                    </div>
+                    <p class="date-added"><span class="info-label">تاريخ الإضافة:</span> 5 مايو، 2024</p>
+                    <!-- Left Arrow pointing to Line -->
+                    <div class="arrow left-arrow"></div>
+                </div>
+            </div>
+            <!-- Line Separator -->
+            <div class="col-md-1">
+                <div class="line"></div>
+            </div>
+            <!-- Right Card with Arrow -->
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="action-icons">
+                        <button class="btn btn-primary"><i class="fas fa-plus"></i></button> <!-- Add icon button -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://via.placeholder.com/80" alt="صورة المستخدم" class="user-profile">
+                        </div>
+                        <div class="col-md-8 text-right">
+                            <h4 class="card-title">المعاملة 2</h4>
+                            <p class="card-subtitle">الوجهة: قسم التسويق</p>
+                            <p class="card-text"><span class="info-label">رقم المهملات:</span> TR98765</p>
+                            <p class="card-text"><span class="info-label">موضوع البريد الوارد:</span> حملة تسويقية</p>
+                            <p class="card-text"><span class="info-label">نوع الإجراء:</span> مراجعة</p>
+                            <p class="card-text"><span class="info-label">وجهة البريد الوارد:</span> الوارد التسويقي</p>
+                        </div>
+                    </div>
+                    <p class="date-added"><span class="info-label">تاريخ الإضافة:</span> 10 مايو، 2024</p>
+                    <!-- Right Arrow pointing to Line -->
+                    <div class="arrow right-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome (for icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Bootstrap JS and dependencies (not required for visual layout) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
